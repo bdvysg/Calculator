@@ -4,6 +4,35 @@
              xmlns:local="clr-namespace:Calculator"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        
+        <Style x:Key="BaseButtonStyle" TargetType="Button">
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                CornerRadius="15">
+                            <ContentPresenter HorizontalAlignment="Center"
+                                              VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="OperatorButtonStyle" BasedOn="{StaticResource BaseButtonStyle}" TargetType="Button">
+            <Setter Property="Background" Value="LightCoral"/>
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+
+        <Style x:Key="NumbersButtonStyle" BasedOn="{StaticResource BaseButtonStyle}" TargetType="Button">
+            <Setter Property="Background" Value="LightGray"/>
+        </Style>
+
+        <Style x:Key="FeaturesButtonStyle" BasedOn="{StaticResource BaseButtonStyle}" TargetType="Button">
+            <Setter Property="Background" Value="LightYellow"/>
+        </Style>
     </Application.Resources>
 </Application>
