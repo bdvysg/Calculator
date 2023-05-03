@@ -3,4 +3,4 @@
 My first xaml app
 
 
-!(pics/main.png?raw=true "Title")
+![app](pics/main.png)
